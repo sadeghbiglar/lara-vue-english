@@ -1,0 +1,61 @@
+[{
+    "id": "1",
+    "word": "apple",
+    "meaning": "سیب"
+  },
+  {
+    "id": "2",
+    "word": "car",
+    "meaning": "ماشین"
+  },
+  {
+    "id": "3",
+    "word": "dog",
+    "meaning": "سگ"
+  },
+  {
+    "id": "4",
+    "word": "cat",
+    "meaning": "گربه"
+  },
+  {
+    "id": "5",
+    "word": "data",
+    "meaning": "اطلاعات"
+  },
+  {
+    "id": "6",
+    "word": "door",
+    "meaning": "درب"
+  },
+  {
+    "id": "7",
+    "word": "foot",
+    "meaning": "پا"
+  },
+  {
+    "id": "8",
+    "word": "test",
+    "meaning": "آزمایش"
+  },
+  {
+    "id": "9",
+    "word": "table",
+    "meaning": "جدول"
+  },
+  {
+    "id": "10",
+    "word": "fish",
+    "meaning": "ماهی"
+  },
+  {
+    "id": "11",
+    "word": "girl",
+    "meaning": "دختر"
+  },
+  {
+    "id": "12",
+    "word": "boy",
+    "meaning": "پسر"
+  }
+]
