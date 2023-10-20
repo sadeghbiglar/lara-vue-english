@@ -1,0 +1,65 @@
+.word-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+    /* انتقال رنگ با انیمیشن */
+}
+
+.green-box {
+    background-color: green;
+}
+
+.yellow-box {
+    background-color: yellow;
+}
+
+.meaning {
+    display: none;
+}
+
+.word-box:hover .meaning {
+    display: block;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    /* تنظیم فضای بین دو دکمه */
+}
+
+.button-wrapper {
+    flex: 1;
+    margin: 5px;
+    /* تنظیم فاصله بین دکمه‌ها */
+}
+
+.alert-success {
+    margin-top: 20px;
+    /* تعیین فاصله بین پیام هشدار و کلمات */
+}
+
+.progress-container {
+    width: 100%;
+    height: 20px;
+    background-color: #eee;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #e228e2;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.image-container {
+    width: 200px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}

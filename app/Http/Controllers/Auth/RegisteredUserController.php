@@ -42,7 +42,19 @@ class RegisteredUserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);
-
+        $words = \App\Models\Word::all(); 
+        foreach ($words as $word) {
+            \App\Models\UserWords::create([
+                'user_id' => $user->id, 
+                'word_id' => $word->id, 
+                'review1' => false,
+                'review2' => false,
+                'review3' => false,
+                'review1_date' => null,
+                'review2_date' => null,
+                'review3_date' => null,
+            ]);
+        }
         event(new Registered($user));
 
         Auth::login($user);
