@@ -18,5 +18,9 @@ class UserWords extends Model
         'review2_date',
         'review3_date',
     ];
-    
+    public function word()
+{
+    return $this->belongsTo(Word::class, 'word_id');
+}
+
 }

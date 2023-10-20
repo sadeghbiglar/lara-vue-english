@@ -7,6 +7,18 @@ use App\Models\Word;
 use App\Models\UserWords;
 class UserWordsController extends Controller
 {
+    public function getUserWordsForReview1()
+{
+    $userWords = UserWords::where('user_id', 2)
+//$userWords = UserWords::where('user_id', auth()->id())
+        ->where('review1', 0)
+        //->with(['word']) 
+        ->with('word:id,word')
+        ->get();
+
+    return response()->json($userWords);
+}
+
     public function copyWords()
     {
         $words = Word::all();

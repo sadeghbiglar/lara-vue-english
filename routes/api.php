@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('/words', [WordController::class, 'index']);
 Route::get('/copy-words', [UserWordsController::class, 'copyWords']);
+//Route::middleware(['auth:sanctum'])->get('/userwords/review1', [UserWordsController::class, 'getUserWordsForReview1']);
+Route::get('/userwords/review1', [UserWordsController::class, 'getUserWordsForReview1']);
