@@ -1,6 +1,7 @@
 <script setup>
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head } from "@inertiajs/vue3";
+import axios from "axios";
 
 import { ref, onMounted } from "vue";
 
@@ -14,6 +15,7 @@ const stage1Progress = ref(0);
 const stage2Progress = ref(0);
 const stage3Progress = ref(0);
 const totalProgress = 100;
+
 const loadWords = async () => {
   try {
     const response = await fetch("http://localhost/api/userwords/review1");
@@ -110,7 +112,16 @@ const resetWordStatus = () => {
   });
   shuffledWords.value = shuffleArray([...words.value]);
 };
-
+/* const fetchData = () => {
+  axios
+    .get("/api/userwords/review1")
+    .then(response => {
+      console.log(response.data);
+    })
+    .catch(error => {
+      console.error(error);
+    });
+}; */
 onMounted(() => {
   // خواندن داده‌های JSON از فایل
   loadWords();
@@ -156,7 +167,7 @@ onMounted(() => {
                   @click="toggleMeaning(index)"
                   class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700"
                 >نمایش معنی</button>
-                <div v-if="item.showMeaning" class="text-center mt-4">{{ item.meaning }}</div>
+                <div v-if="item.showMeaning" class="text-center mt-4">{{ item.word.meaning }}</div>
               </div>
             </div>
           </div>

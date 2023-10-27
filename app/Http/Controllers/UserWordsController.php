@@ -13,7 +13,7 @@ class UserWordsController extends Controller
 //$userWords = UserWords::where('user_id', auth()->id())
         ->where('review1', 0)
         //->with(['word']) 
-        ->with('word:id,word')
+        ->with('word:id,word,meaning')
         ->get();
 
     return response()->json($userWords);
